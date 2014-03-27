@@ -50,21 +50,21 @@ John is prescribed:
 
 John enters these details into the Medico application, which creates two instances of the class as follows:
 
-medicationClassOne.NameOfMedication			= "Ibruprofen";
-medicationClassOne.ShortName				= "Pain meds";
-medicationClassOne.TimePeriodBetweenDoses	= "240";
-medicationClassOne.PrescribedDosage			= "2";
-medicationClassOne.MaxNumberOfDosesPerDay	= "4";
-medicationClassOne.InitialDoseTime			= "09:00";
-medicationClassOne.Description				= "red capsules with a single blue stripe";
+    medicationClassOne.NameOfMedication			= "Ibruprofen";
+    medicationClassOne.ShortName				= "Pain meds";
+    medicationClassOne.TimePeriodBetweenDoses	= "240";
+    medicationClassOne.PrescribedDosage			= "2";
+    medicationClassOne.MaxNumberOfDosesPerDay	= "4";
+    medicationClassOne.InitialDoseTime			= "09:00";
+    medicationClassOne.Description				= "red capsules with a single blue stripe";
 
-medicationClassTwo.NameOfMedication			= "MadeUpIButamol";
-medicationClassTwo.ShortName				= "Patches";
-medicationClassTwo.TimePeriodBetweenDoses	= "240";
-medicationClassTwo.PrescribedDosage			= "1";
-medicationClassTwo.MaxNumberOfDosesPerDay	= "6";
-medicationClassTwo.InitialDoseTime			= "09:00";
-medicationClassTwo.Description				= "buff coloured patches";
+    medicationClassTwo.NameOfMedication			= "MadeUpIButamol";
+    medicationClassTwo.ShortName				= "Patches";
+    medicationClassTwo.TimePeriodBetweenDoses	= "240";
+    medicationClassTwo.PrescribedDosage			= "1";
+    medicationClassTwo.MaxNumberOfDosesPerDay	= "6";
+    medicationClassTwo.InitialDoseTime			= "09:00";
+    medicationClassTwo.Description				= "buff coloured patches";
 
 The application sets the following alarms on John's device:
 
