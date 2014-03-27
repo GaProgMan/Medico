@@ -19,7 +19,7 @@ We'd discussed the idea in great detail during (what would become) his final sum
 
 All of his medication was time based, so he would have to set each of the alarms at the beginning of the day - MANUALLY. What he wanted was an app that would set all of the alarms for him when he took his first dose in the morning. Should his miss or delay a dose, the later alarms would be put on hold until he took his allotted dose, then all alarms based after that one would cascade AUTOMATICALLY.
 
-I will consider this application 100% successful if only one person is helped by it.
+I will consider this repository 100% successful if only one person is helped by it. Also, should this code base help convince developers to create a similar application, then this will be taken as 100% success for this repository.
 
 Technology
 ----------
