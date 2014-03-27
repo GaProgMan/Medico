@@ -18,3 +18,8 @@ We'd discussed the idea in great detail during (what would become) his final sum
 * Nap until it was time to take his medication (the alarm would wake him)
 
 All of his medication was time based, so he would have to set each of the alarms at the beginning of the day - MANUALLY. What he wanted was an app that would set all of the alarms for him when he took his first dose in the morning. Should his miss or delay a dose, the later alarms would be put on hold until he took his allotted dose, then all alarms based after that one would cascade AUTOMATICALLY.
+
+Technology
+----------
+
+Initially, the application will be written using C# for the Windows platform. This will be the proof of concept phase. Once passed the proof of concept stage, then the application will be ported to Android (using Java). If the application proves useful, then the application will be ported Windows Mobile and iOS.
