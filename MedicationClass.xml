@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <medication>
 	<NameOfMedication></NameOfMedication>
+	<ShortName></ShortName>
 	<TimePeriodBetweenDoses></TimePeriodBetweenDoses>
 	<PrescribedDosage></PrescribedDosage>
 	<MaxNumberOfDosesPerDay></MaxNumberOfDosesPerDay>
+	<InitialDoseTime></InitialDoseTime>
 	<Description></Description>
 </medication>
 
@@ -23,9 +25,11 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="NameOfMedication"			type="xs:string"	minOccurs="1" maxOccurs="1"/>
+				<xs:element name="ShortName"				type="xs:string"	minOccurs="1" maxOccurs="1"/>
 				<xs:element name="TimePeriodBetweenDoses"	type="xs:string"	minOccurs="1" maxOccurs="1"/>
 				<xs:element name="PrescribedDosage"			type="xs:string"	minOccurs="1" maxOccurs="1"/>
 				<xs:element name="MaxNumberOfDosesPerDay"	type="xs:string"	minOccurs="1" maxOccurs="1"/>
+				<xs:element name="InitialDoseTime"			type="xs:string"	minOccurs="1" maxOccurs="1"/>
 				<xs:element name="Description"				type="xs:string"	minOccurs="1" maxOccurs="1"/>
 			</xs:sequence>
 		</xs:complexType>
