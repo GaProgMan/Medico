@@ -36,7 +36,7 @@ Each of the different versions of the main application will, likely, have differ
 Medication Class
 ----------------
 
-The backbone of this application is the Medication class. The XML representation of this class can be found in the file ''MedicationClass.xml``, the original notes that lead to it's creation can be found in the ''OriginalNotes.md`` file (both are in the root of the repository).
+The backbone of this application is the Medication class. The XML representation of this class can be found in the file MedicationClass.xml, the original notes that lead to it's creation can be found in the OriginalNotes.md file (both are in the root of the repository).
 
 The application will create one or more instance of these objects with the user supplying the medical name, short name (a name that is easier for the user to recognise as some medications have long names), suggested dosage, time between doses (in minutes), maximum doses in a 24 hour period, the time of the initial dosage (optional), and a short description of the medication. This information will be used by the application to create a series of alarms for each dose of the medication.
 
