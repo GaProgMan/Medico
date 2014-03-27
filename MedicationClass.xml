@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medication>
+	<NameOfMedication></NameOfMedication>
+	<TimePeriodBetweenDoses></TimePeriodBetweenDoses>
+	<PrescribedDosage></PrescribedDosage>
+	<MaxNumberOfDosesPerDay></MaxNumberOfDosesPerDay>
+	<Description></Description>
+</medication>
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:annotation>
+		<xs:appinfo>Medico Class Declaration</xs:appinfo>
+		<documentation xml:lang="en">
+			An XML representation of the internal 'medication' object for
+			the Medico application.
+			This XML will form the basis for internal objects that will
+			be serialised to disk on application close, and parsed from
+			disk on application start.
+		</documentation>
+	</xs:annotation>
+	<xs:element medication	minOccurs="1" maxOccurs="unbounded">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NameOfMedication"			type="xs:string"	minOccurs="1" maxOccurs="1"/>
+				<xs:element name="TimePeriodBetweenDoses"	type="xs:string"	minOccurs="1" maxOccurs="1"/>
+				<xs:element name="PrescribedDosage"			type="xs:string"	minOccurs="1" maxOccurs="1"/>
+				<xs:element name="MaxNumberOfDosesPerDay"	type="xs:string"	minOccurs="1" maxOccurs="1"/>
+				<xs:element name="Description"				type="xs:string"	minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
