@@ -12,6 +12,21 @@
 		<xs:complexType>
 			<xs:sequence>
 
+				<xs:element name="medicationActive" type="xs:string"
+							maxOccurs="1" minOccurs="1">
+					<xs:annotation id="medication.medicationActive">
+						<xs:documentation xml:lang="en">
+							Whether the medication should be listed as being
+							actively taken. If this is set to false, then no
+							alarms will be created for this medication.
+							Developer note: This shouldn't be a free text value
+							in the finally version. The final version should be
+							an xs:boolean representing whether the medication
+							is active.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
 				<xs:element name="readableName" type="xs:string"
 							maxOccurs="1" minOccurs="1">
 					<xs:annotation id="medication.readableName">
@@ -25,12 +40,27 @@
 					</xs:annotation>
 				</xs:element>
 
-				<xs:element name="dosage" type="xs:string"
+				<xs:element name="medicalName" type="xs:string"
 							maxOccurs="1" minOccurs="1">
-					<xs:annotation id="medication.dosage">
+					<xs:annotation id="medication.medicalName">
 						<xs:documentation xml:lang="en">
-							The dosage amount for the medication. Initially,
-							this will be a free text value
+							The medical readable name of the medication. Useful
+							for identifying the medication by the name on the
+							packaging.
+							Developer note: Perhaps there should be some input
+							checking to ensure that nothing can be passed to
+							the database/filestore backend which could be harm-
+							ful?
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
+				<xs:element name="prescribedDosage" type="xs:string"
+							maxOccurs="1" minOccurs="1">
+					<xs:annotation id="medication.prescribedDosage">
+						<xs:documentation xml:lang="en">
+							The prescribed dosage for the medication. Initially,
+							this will be a free text value.
 							Developer note: This shouldn't be a free text value
 							in the finally version. The final version should be
 							an integer representing the mg per dosage
@@ -38,13 +68,14 @@
 					</xs:annotation>
 				</xs:element>
 
-				<xs:element name="frequency" type="xs:string"
+				<xs:element name="timeBetweenDoses" type="xs:string"
 							maxOccurs="1" minOccurs="1">
-					<xs:annotation id="medication.frequency">
+					<xs:annotation id="medication.timeBetweenDoses">
 						<xs:documentation xml:lang="en">
-							The frequency of each dosage for the medication.
-							Initially, this will be a free text value
-							Developer note: As with dosage, this shouldn't be
+							The time (in minutes) between each dosage; will be
+							used to set appropriate alarms
+							Initially, this will be a free text value.
+							Developer note: As with prescribedDosage, this shouldn't be
 							free text once released. The final version should
 							be an integer representing the number of minutes
 							between dosages (perhaps the UI should have an
@@ -52,9 +83,105 @@
 						</xs:documentation>
 					</xs:annotation>
 				</xs:element>
+
+				<xs:element name="maximumDosages" type="xs:string"
+							maxOccurs="1" minOccurs="1">
+					<xs:annotation id="medication.maximumDosages">
+						<xs:documentation xml:lang="en">
+							The maximum number of doses the user is permitted
+							to take. This will be used to set the correct numb-
+							er of alarms.
+							Initially, this will be a free text value.
+							Developer note: This shouldn't be a free text value
+							in the finally version. The final version should be
+							an integer representing maximum number of times that
+							the user is permitted to take the medication.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
+				<xs:element name="initialDoseTime" type="xs:string"
+							maxOccurs="1" minOccurs="1">
+					<xs:annotation id="medication.initialDoseTime">
+						<xs:documentation xml:lang="en">
+							The time of the first dose for each day. This will
+							be used as to set the first alarm, and to base the
+							rest of the alarm times on.
+							Initially, this will be a free text value.
+							Developer note: This will not be a free text value
+							in the finally version. The final version will be
+							of xs:time type.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
+				<xs:element name="plannedDosagesTimes" type="xs:string"
+							maxOccurs="1" minOccurs="1">
+					<xs:annotation id="medication.plannedDosagesTimes">
+						<xs:documentation xml:lang="en">
+							The calculated dosage times (based on the initial
+							dose time, maximum number of dosages and time bet-
+							ween dosages). This shall be a comma separated list
+							of strings which represent time value.
+							Initially, this will be a free text value.
+							Developer note: The value here should be checked
+							before being used, and if there is an issue, then
+							it should not be used.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
+				<xs:element name="actionedDosageTimes" type="xs:string"
+							maxOccurs="1" minOccurs="1">
+					<xs:annotation id="medication.actionedDosageTimes">
+						<xs:documentation xml:lang="en">
+							As protection against application crashes, the med-
+							ications which the user marks as having been taken
+							are added to this comma separated list. This list
+							contains times of all medications which have been
+							taken. When ever an alarm is dismissed, this list
+							is updated and written to database/filestore.
+							Initially, this will be a free text value.
+							Developer note: The value here should be checked
+							before being used, and if there is an issue, then
+							it should not be used.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
+				<xs:element name="medicationAddedDate" type="xs:string"
+							maxOccurs="1" minOccurs="1" >
+					<xs:annotation id="medication.medicationAddedDate">
+						<xs:documentation xml:lang="en">
+							The date when this medication was added. This will
+							be used to keep track of how many doses the user
+							has taken during the life time of the prescription.
+							Developer note: This will not be a free text value
+							in the finally version. The final version will be
+							of xs:date type.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
+				<xs:element name="medicationNoLongerActiveDate" type="xs:string"
+							maxOccurs="1" minOccurs="1" >
+					<xs:annotation id="medication.medicationNoLongerActiveDate">
+						<xs:documentation xml:lang="en">
+							The date when this medication was set to no longer
+							active. This will be usful in the full version of
+							the application for logging all prescribed medicat-
+							ion that has been trialed and taken during a course
+							of treatment.
+							Developer note: This will not be a free text value
+							in the finally version. The final version will be
+							of xs:date type.
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
 				<xs:element name="notes" type="xs:string"
-							maxOccurs="1" minOccurs="1" />
-							<xs:annotation id="medication.notes">
+							maxOccurs="1" minOccurs="1" >
+					<xs:annotation id="medication.notes">
 						<xs:documentation xml:lang="en">
 							Any notes that the user would like to attach to the
 							medication.
@@ -63,6 +190,9 @@
 							the database/filestore backend which could be harm-
 							ful?
 						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
 			</xs:sequence>
 		</xs:complexType>
 	</xs:elememt>
