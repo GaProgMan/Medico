@@ -62,7 +62,7 @@
 							checking to ensure that nothing can be passed to
 							the database/filestore backend which could be harm-
 							ful?
-						</xs:documentat
+						</xs:documentation>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:elememt>
