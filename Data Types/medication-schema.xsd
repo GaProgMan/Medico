@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<annotation>
+		<documentation xml:lang="en">
+			Initial design for Medico XML schema. This schema will be used to
+			validate the serialised objects as they are written to XML and the
+			de-serialised objects read from XML.
+		</documentation>
+
+	<xs:elememt name="medication">
+		<xs:complexType>
+			<xs:sequence>
+
+				<xs:element name="readableName" type="xs:string"
+							maxOccurs="1" minOccurs="1">
+					<xs:annotation id="medication.readableName">
+						<xs:documentation xml:lang="en">
+							The human readable name of the medication.
+							Developer note: Perhaps there should be some input
+							checking to ensure that nothing can be passed to
+							the database/filestore backend which could be harm-
+							ful?
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
+				<xs:element name="dosage" type="xs:string"
+							maxOccurs="1" minOccurs="1">
+					<xs:annotation id="medication.dosage">
+						<xs:documentation xml:lang="en">
+							The dosage amount for the medication. Initially,
+							this will be a free text value
+							Developer note: This shouldn't be a free text value
+							in the finally version. The final version should be
+							an integer representing the mg per dosage
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+
+				<xs:element name="frequency" type="xs:string"
+							maxOccurs="1" minOccurs="1">
+					<xs:annotation id="medication.frequency">
+						<xs:documentation xml:lang="en">
+							The frequency of each dosage for the medication.
+							Initially, this will be a free text value
+							Developer note: As with dosage, this shouldn't be
+							free text once released. The final version should
+							be an integer representing the number of minutes
+							between dosages (perhaps the UI should have an
+							enumerated multiplier [hours] ? )
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="notes" type="xs:string"
+							maxOccurs="1" minOccurs="1" />
+							<xs:annotation id="medication.notes">
+						<xs:documentation xml:lang="en">
+							Any notes that the user would like to attach to the
+							medication.
+							Developer note: Perhaps there should be some input
+							checking to ensure that nothing can be passed to
+							the database/filestore backend which could be harm-
+							ful?
+						</xs:documentat
+			</xs:sequence>
+		</xs:complexType>
+	</xs:elememt>
+
+</xs:schema>

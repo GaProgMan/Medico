@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medication
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="medication-schema.xsd">
+	<annotation>
+		<documentation xml:lang="en">
+			Design for Medico XML medication record. Work in progress
+		</documentation>
+	</annotation>
+
+	<readableName>
+		<!-- The readableName tag will encapsulate a human readable name for the medication -->
+	</readableName>
+	<dosage>
+		<!-- The dosage tag will encapsulate the dosage amount, supplied by the user. This will be free text, initially -->
+	</dosage>
+	<frequency>
+		<!-- The frequency tag will encapsulate the frequency by which the user must take the medication (half hourly, hourly, daily, etc.) -->
+	</frequency>
+	<notes>
+		<!-- The notes tag will encapsulate any notes that the user wishes to make about the meditcation -->
+	</notes>
+</medication>
