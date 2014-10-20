@@ -11,7 +11,7 @@ Project Goal
 
 Fulfil the final wish of a close friend of mine who passed away, at the age of 32, shortly before Christmas 2013. He'd lamented on the fact that there weren't any apps that could help him to take all of his prescribes medications on time.
 
-We'd discussed the idea in great detail during (what would become) his final summer. He medication regimen was quite strict during the final year of his life, and he would follow this procedure everyday:
+We'd discussed the idea in great detail during (what would become) his final summer. His medication regimen was quite strict during the final year of his life, and he would follow this procedure everyday:
 
 * Take his first medication shortly after waking
 * Create a series of alarms on his mobile devices, one for each the doses of his medication
@@ -36,7 +36,7 @@ Each of the different versions of the main application will, likely, have differ
 Medication Class
 ----------------
 
-The backbone of this application is the Medication class. The XML representation of this class can be found in the file MedicationClass.xml, the original notes that lead to it's creation can be found in the OriginalNotes.md file (both are in the root of the repository).
+The backbone of this application is the Medication class. The XML representation of this class can be found in the file ~~MedicationClass.xml~~"Data Types/medication-schema.xsd", the original notes that lead to it's creation can be found in the OriginalNotes.md file (both are in the root of the repository).
 
 The application will create one or more instance of these objects with the user supplying the medical name, short name (a name that is easier for the user to recognise as some medications have long names), suggested dosage, time between doses (in minutes), maximum doses in a 24 hour period, the time of the initial dosage (optional), and a short description of the medication. This information will be used by the application to create a series of alarms for each dose of the medication.
 
