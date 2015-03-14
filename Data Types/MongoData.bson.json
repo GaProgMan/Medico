@@ -1,0 +1,81 @@
+/* 0 - fields */
+{
+	// Will be required in the long run, to help with online syncing
+	UserId			: "string",
+	// Helps to identify the user - can be left blank
+	UserNameFull	: "string",
+	// The medication array
+	Medication : [
+		{
+			// The full medical name of the medication.
+			FullMedicalName			: "string",
+			// ShortName is meant to be a human readable name for the
+			// medication.
+			ShortName				: "string",
+			// The time, in minutes, between each dose.
+			TimePeriodBetweenDoses	: "int",
+			// A human readable description of the dosage (e.g, two
+			// grey pills, one disposable needle, etc.)
+			PrescribedDosage		: "string",
+			// A human readable description of the maximum number of
+			// doses per day for the umedication
+			MaximumDosagePerDay		: "string",
+			// Planned initial dose time per day. Used by alert system
+			// to set alerts for each day from this time onwards.
+			InitialDoseTime			: "string",
+			// A human readable description of the medication. If it
+			// is a pill, then what colour is it? does it have any
+			// markings? etc.
+			Description				: "string",
+			// A GUId for helping the system recognise the medication
+			_id						: "GUID",
+			// The dosage array
+			DosageTimes	: [
+				{
+					// JSON has no native support for TIME, but MongoDB
+					// can return a Time object which is the number of
+					// seconds/milliseconds since the Unix epoch.
+					// This may prove difficult to convert to and from
+					// on non-Unix systems.
+					TimeTaken		: "string",
+					// A human readable description of the doseage taken
+					DosageTaken		: "string",
+					// Any notes that the user wants to add to this dose.
+					Notes			: "string"
+				}
+			]
+		}
+	]
+}
+
+/* 1 - example */
+{
+	UserId			: "GaProgMan",
+	UserNameFull	: "Jamie Taylor",
+	Medication : [
+		{
+			_id						: 0,
+			FullMedicalName			: "Cocodamol",
+			ShortName				: "Pain Meds",
+			TimePeriodBetweenDoses	: 360,
+			PrescribedDosage		: "Two small grey pills with 'C' embossed one one side",
+			MaximumDosagePerDay		: "No more than 8 pills in a 24 hour period",
+			InitialDoseTime			: "09:30:00",
+			Description				: "Small grey pills with a 'C' embossed on one side"
+			DosageTimes : [
+				{
+					/* 0 */
+					TimeTaken		: "09:30:27",
+					DosageTaken		: "Two small grey pills with 'C' embossed on one side",
+					Notes			: ""
+				},
+				{
+					/* 1 */
+					TimeTaken		: "15:40:45",
+					DosageTaken		: "Two small grey pills with 'C' embossed on one side",
+					Notes			: "Taken 10 minutes late because it would have been on an empty stomach"
+				}
+			]
+		}
+	]
+}
