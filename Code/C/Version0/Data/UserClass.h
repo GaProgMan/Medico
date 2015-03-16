@@ -16,6 +16,7 @@
 class UserClass
 {
 public:
+	UserClass();
 	UserClass(std::string newUserId, std::string newUserName, std::vector<Medication> newMeds);
 	~UserClass();
 	
@@ -30,6 +31,9 @@ public:
 	std::string UserId();
 	std::vector<Medication> Medications();
 	Medication Medications(std::string guid);
+	
+	// Debug Code
+	std::string ToString();
 	
 private:
 	std::string userName;

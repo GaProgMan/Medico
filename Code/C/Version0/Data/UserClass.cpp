@@ -14,6 +14,12 @@
 // For malloc
 #include <stdlib.h>
 
+UserClass::UserClass() {
+	userId = "";
+	userName = "";
+	medications.clear();
+}
+
 /**
  * @brief Instanciates a new instance of the UserClass object
  * @param newUserId the value for the UserId property
@@ -30,7 +36,12 @@ UserClass::UserClass(std::string newUserId, std::string newUserName, std::vector
 
 UserClass::~UserClass() {
 	//To do: implement, sucker!
+	medications.clear();
 }
+
+/***********************************************************
+ * Accessor methods
+ ***********************************************************/
 
 /**
  * @brief Accessor method for the userId propery
@@ -55,6 +66,10 @@ std::string UserClass::UserName() {
 std::vector<Medication> UserClass::Medications() {
 	return medications;
 }
+
+/***********************************************************
+ * Accessor methods
+ ***********************************************************/
 
 /**
  * @brief Searches through instances of Medication for one which matches the supplied guid
@@ -106,4 +121,28 @@ void UserClass::Medications(Medication medsToAdd) {
  */
 void UserClass::Medications(std::vector<Medication> medsToAdd) {
 	medications.insert(medications.end(), medsToAdd.begin(), medsToAdd.end());
+}
+
+/***********************************************************
+ * Debug methods
+ ***********************************************************/
+ 
+/**
+ * @brief Debug code: Converts an instance of the UserClass to a string for debug purposes
+ * @return A string representing an instance of the UserClass
+ */
+std::string UserClass::ToString() {
+	std::string details;
+	
+	details +=  "User Details:\n==========\nUserId:\t" + userId + "\n" +
+				"UserName:\t" + userName + "\n";
+	
+	if(!medications.empty()) {
+		// If there are medications, then grab those two
+		for(int i = 0; i < medications.size(); i++) {
+			details += "\nMedicationDetails\n==========\n" + medications[i].ToString() + "\n";
+		}
+	}
+			
+	return details;
 }
