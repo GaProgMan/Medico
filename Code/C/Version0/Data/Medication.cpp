@@ -8,6 +8,17 @@
 // so that we can use the string datatype
 #include <string>
 
+Medication::Medication() {
+	fullMedicalName = "";
+	shortName = "";
+	perscribedDoseage = "";
+	maximumDosagePerDay = "";
+	initialDosageTime = "";
+	description = "";
+	guid = "";
+	timePeriodBetweenDoses = 0;
+}
+
 /**
  * @brief Instanciates a new instance of the Medication class
  * @param newFullMedicalName the value for the FullMedicalName property
@@ -25,6 +36,7 @@ Medication::Medication(	std::string newFullMedicalName, std::string newShortName
 			std::string newGuid, int newTimePeriodBetweenDoses) {
 				fullMedicalName = newFullMedicalName;
 				shortName = newShortName;
+				perscribedDoseage = newPerscribedDosage;
 				maximumDosagePerDay = newMaximumDosage;
 				initialDosageTime = newInitialDosageTime;
 				description = newDescription;
@@ -35,6 +47,10 @@ Medication::Medication(	std::string newFullMedicalName, std::string newShortName
 Medication::~Medication() {
 	// todo: this, sucker
 }
+
+/***********************************************************
+ * Accessor methods
+ ***********************************************************/
 
 /**
  * @brief Get method for fullMedicalName property
@@ -100,6 +116,10 @@ int Medication::TimePeriodBetweenDoses() {
 	return timePeriodBetweenDoses;
 }
 
+/***********************************************************
+ * Mutator methods
+ ***********************************************************/
+
 /**
  * @brief Set method for fullMedicalName
  * @param newFullMedicalName the new value for the fullMedicalName property
@@ -162,4 +182,22 @@ void Medication::Guid(std::string newGuid) {
  */
 void Medication::TimePeriodBetweenDoses(int newTimePeriodBetweenDoses) {
 	timePeriodBetweenDoses = newTimePeriodBetweenDoses;
+}
+
+/***********************************************************
+ * Debug methods
+ ***********************************************************/
+
+/**
+ * @brief Debug code: Converts an instance of a Medication class to a string for outputting to the console/terminal
+ * @return A string representation of an instance of the Medication class
+ */
+std::string Medication::ToString(){
+	return "Full Name:\t" + fullMedicalName + "\n" +
+			"Short name:\t" + shortName + "\n" +
+			"Perscribed Dosage:\t\t" + perscribedDoseage + "\n" +
+			"Maximum Dosage Per Day:\t" + maximumDosagePerDay + "\n" +
+			"Initial Dosage Time:\t\t" + initialDosageTime + "\n" +
+			"Guid:\t" + guid + "\n" +
+			"Time Period Between Doses:\t" + std::to_string(timePeriodBetweenDoses);
 }

@@ -39,6 +39,9 @@ public:
 	std::string Description();
 	std::string Guid();
 	int			TimePeriodBetweenDoses();
+	
+	// debug methods
+	std::string ToString();
 
 private:
 	std::string fullMedicalName;
