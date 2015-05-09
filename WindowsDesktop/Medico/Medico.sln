@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medico", "Medico\Medico.csproj", "{2655A3AD-C5E3-4F61-A2F2-A45062EFD001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klinger", "Klinger\Klinger.csproj", "{01683DE4-FFB7-497C-B6D3-7C0C612B035F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeaJay", "BeaJay\BeaJay.csproj", "{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01683DE4-FFB7-497C-B6D3-7C0C612B035F}.Debug|x86.ActiveCfg = Debug|x86
+		{01683DE4-FFB7-497C-B6D3-7C0C612B035F}.Debug|x86.Build.0 = Debug|x86
+		{01683DE4-FFB7-497C-B6D3-7C0C612B035F}.Release|x86.ActiveCfg = Release|x86
+		{01683DE4-FFB7-497C-B6D3-7C0C612B035F}.Release|x86.Build.0 = Release|x86
+		{2655A3AD-C5E3-4F61-A2F2-A45062EFD001}.Debug|x86.ActiveCfg = Debug|x86
+		{2655A3AD-C5E3-4F61-A2F2-A45062EFD001}.Debug|x86.Build.0 = Debug|x86
+		{2655A3AD-C5E3-4F61-A2F2-A45062EFD001}.Release|x86.ActiveCfg = Release|x86
+		{2655A3AD-C5E3-4F61-A2F2-A45062EFD001}.Release|x86.Build.0 = Release|x86
+		{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}.Debug|x86.ActiveCfg = Debug|x86
+		{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}.Debug|x86.Build.0 = Debug|x86
+		{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}.Release|x86.ActiveCfg = Release|x86
+		{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
