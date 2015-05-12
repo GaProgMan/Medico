@@ -16,9 +16,9 @@ namespace BeaJay
 			// Widget BeaJay.About
 			this.Name = "BeaJay.About";
 			this.Title = "Medico About Window";
-			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
-			this.Resizable = false;
-			this.AllowGrow = false;
+			this.WindowPosition = ((global::Gtk.WindowPosition)(1));
+			this.DefaultWidth = 250;
+			this.DefaultHeight = 250;
 			// Internal child BeaJay.About.VBox
 			global::Gtk.VBox w1 = this.VBox;
 			w1.Name = "aboutVbox";
@@ -31,6 +31,9 @@ namespace BeaJay
 			this.aboutTextView = new global::Gtk.TextView ();
 			this.aboutTextView.CanFocus = true;
 			this.aboutTextView.Name = "aboutTextView";
+			this.aboutTextView.Editable = false;
+			this.aboutTextView.CursorVisible = false;
+			this.aboutTextView.AcceptsTab = false;
 			this.aboutScrolledWindow.Add (this.aboutTextView);
 			w1.Add (this.aboutScrolledWindow);
 			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(w1 [this.aboutScrolledWindow]));
@@ -56,8 +59,6 @@ namespace BeaJay
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
 			}
-			this.DefaultWidth = 400;
-			this.DefaultHeight = 300;
 			this.Show ();
 			this.aboutBtnOk.Clicked += new global::System.EventHandler (this.OnButtonClick);
 		}
