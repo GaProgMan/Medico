@@ -1,0 +1,14 @@
+!! Make sure to run Platypus to get a MacOS compatible binary, using the script in the Release folder and the entire contents of it (minus the script)
+
+More information available here: http://stackoverflow.com/a/15655635
+
+Script contents:
+
+[sharp]!/bin/sh
+
+export DYLD_FALLBACK_LIBRARY_PATH="/Library/Frameworks/Mono.framework/Versions/Current/lib:$DYLD_FALLBACK_LIBRARY_PATH:/usr/lib"
+
+exec /Library/Frameworks/Mono.framework/Versions/Current/bin/mono ./Medico.exe
+
+
+https://davidsonblake.wordpress.com/2014/02/07/gtksharp/

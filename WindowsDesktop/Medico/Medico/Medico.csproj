@@ -42,15 +42,18 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Medico.config" />
+    <None Include="ImportantNotes.txt" />
+    <None Include="sciptForPlatypus.sh" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BeaJay\BeaJay.csproj">
-      <Project>{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}</Project>
-      <Name>BeaJay</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Klinger\Klinger.csproj">
       <Project>{01683DE4-FFB7-497C-B6D3-7C0C612B035F}</Project>
       <Name>Klinger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BeaJay\BeaJay.csproj">
+      <Project>{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}</Project>
+      <Name>BeaJay</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

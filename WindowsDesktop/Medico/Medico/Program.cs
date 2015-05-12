@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using NDesk.Options;
 
 namespace Medico
@@ -74,7 +75,7 @@ namespace Medico
         /// </summary>
         static void GuiCall()
         {
-            Console.WriteLine("you just called the GUI");
+            Debug.WriteLine("you just called the GUI");
             var gui = new BeaJay.Gui();
             gui.ShowGui();
         }
@@ -84,7 +85,7 @@ namespace Medico
         /// </summary>
         static void InitialiseScheduler()
         {
-            Console.WriteLine("You just called the scheduler");
+            Debug.WriteLine("You just called the scheduler");
         }
 	}
 }
