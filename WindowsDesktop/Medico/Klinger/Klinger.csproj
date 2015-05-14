@@ -33,4 +33,10 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Winchester\Winchester.csproj">
+      <Project>{65067647-438E-451E-9224-5FF222F4B574}</Project>
+      <Name>Winchester</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

@@ -17,6 +17,10 @@ namespace BeaJay
 		private global::Gtk.VBox baseVerticalSplit;
 		
 		private global::Gtk.MenuBar menubar2;
+		
+		private global::Gtk.ScrolledWindow GtkScrolledWindow;
+		
+		private global::Gtk.TextView debugSerialise;
 
 		protected virtual void Build ()
 		{
@@ -54,6 +58,18 @@ namespace BeaJay
 			w2.Position = 0;
 			w2.Expand = false;
 			w2.Fill = false;
+			// Container child baseVerticalSplit.Gtk.Box+BoxChild
+			this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
+			this.GtkScrolledWindow.Name = "GtkScrolledWindow";
+			this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
+			// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
+			this.debugSerialise = new global::Gtk.TextView ();
+			this.debugSerialise.CanFocus = true;
+			this.debugSerialise.Name = "debugSerialise";
+			this.GtkScrolledWindow.Add (this.debugSerialise);
+			this.baseVerticalSplit.Add (this.GtkScrolledWindow);
+			global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.baseVerticalSplit [this.GtkScrolledWindow]));
+			w4.Position = 1;
 			this.Add (this.baseVerticalSplit);
 			if ((this.Child != null)) {
 				this.Child.ShowAll ();
