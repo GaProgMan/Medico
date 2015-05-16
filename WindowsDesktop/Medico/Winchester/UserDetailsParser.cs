@@ -34,7 +34,7 @@ namespace Winchester
                 {
                     var fullFileName = Path.Combine(directoryLocation, input.UserId);
                     fullFileName = string.Concat(fullFileName, ".json");
-                    using (StreamWriter sw = new StreamWriter(directoryLocation))
+                    using (StreamWriter sw = new StreamWriter(fullFileName))
                     {
                         using (JsonWriter writer = new JsonTextWriter(sw))
                         {
