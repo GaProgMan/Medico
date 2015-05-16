@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeaJay", "BeaJay\BeaJay.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winchester", "Winchester\Winchester.csproj", "{65067647-438E-451E-9224-5FF222F4B574}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rizzo", "Rizzo\Rizzo.csproj", "{76FC5846-8CB7-41EA-B396-80FF68EB75A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -27,6 +29,10 @@ Global
 		{65067647-438E-451E-9224-5FF222F4B574}.Debug|x86.Build.0 = Debug|Any CPU
 		{65067647-438E-451E-9224-5FF222F4B574}.Release|x86.ActiveCfg = Release|Any CPU
 		{65067647-438E-451E-9224-5FF222F4B574}.Release|x86.Build.0 = Release|Any CPU
+		{76FC5846-8CB7-41EA-B396-80FF68EB75A1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{76FC5846-8CB7-41EA-B396-80FF68EB75A1}.Debug|x86.Build.0 = Debug|Any CPU
+		{76FC5846-8CB7-41EA-B396-80FF68EB75A1}.Release|x86.ActiveCfg = Release|Any CPU
+		{76FC5846-8CB7-41EA-B396-80FF68EB75A1}.Release|x86.Build.0 = Release|Any CPU
 		{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}.Debug|x86.ActiveCfg = Debug|x86
 		{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}.Debug|x86.Build.0 = Debug|x86
 		{C2CC5C82-A452-4E91-A6C0-605EE069F5C5}.Release|x86.ActiveCfg = Release|x86

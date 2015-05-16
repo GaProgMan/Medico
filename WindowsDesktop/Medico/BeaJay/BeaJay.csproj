@@ -56,6 +56,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\Rizzo\Rizzo.csproj">
+      <Project>{76FC5846-8CB7-41EA-B396-80FF68EB75A1}</Project>
+      <Name>Rizzo</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Winchester\Winchester.csproj">
       <Project>{65067647-438E-451E-9224-5FF222F4B574}</Project>
       <Name>Winchester</Name>
