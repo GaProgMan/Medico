@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using Gtk;
 using Winchester;
 
@@ -10,27 +13,38 @@ namespace BeaJay {
         {
             Build();
 
-            // Test that the medication json serialiser works
-            var testJson = testSomeStuff().Replace(",\"", ",\"" + Environment.NewLine);
-            this.debugSerialise.Buffer.Text = testJson;
+
+//            Test that the medication json serialiser works
+//            var testJson = testSomeStuff().Replace(",\"", ",\"" + Environment.NewLine);
+//            this.debugSerialise.Buffer.Text = testJson;
         }
 
-        public string testSomeStuff()
-        {
-            var testMedication = new Medication
-            {
-                    FullMedicalName = "Ibuprofen",
-                    ShortName = "Pain meds",
-                    PerscribedDosage = "Two pills, every 4 hours",
-                    MaximumDosagePerDay = "8 pills in 24 hours",
-                    Description = "small, pink, round pills in blister packet",
-                    TimePeriodBetweenDoses = 240,
-                    InitialDosageTime = DateTime.Now,
-                    GUID = new Guid(),
-                    IsNull = false
-            };
-            return MedicationParser.Serialise(testMedication);
-        }
+//        public string testSomeStuff()
+//        {
+//            var testMedication = new Medication
+//            {
+//                    FullMedicalName = "Ibuprofen",
+//                    ShortName = "Pain meds",
+//                    PerscribedDosage = "Two pills, every 4 hours",
+//                    MaximumDosagePerDay = "8 pills in 24 hours",
+//                    Description = "small, pink, round pills in blister packet",
+//                    TimePeriodBetweenDoses = 240,
+//                    InitialDosageTime = DateTime.Now,
+//                    GUID = new Guid(),
+//                    IsNull = false
+//            };
+//            
+//            var listOfMeds = new List<Medication>();
+//            listOfMeds.Add(testMedication);
+//            var testUser = new UserDetails
+//            {
+//                FullUserName = "Jay Tizzle",
+//                UserId = "GaProgMan",
+//                Medications = listOfMeds,
+//                IsNull = false
+//            };
+//            return UserDetailsParser.Serialise(testUser);
+//        }
 
         /// <summary>
         /// Quit this instance.
